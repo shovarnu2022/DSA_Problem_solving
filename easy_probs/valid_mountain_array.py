@@ -11,11 +11,11 @@ if you receive an array of size less than 3, then return false
 class Solution:
     def validMountainArray(self, A: List[int]) -> bool:
         i = 1
-        while(i < len(A) and A[i] > A[i-1]):
+        while(i < len(A) and A[i] > A[i-1]): # for the inclining order
             i+=1
-        if(i == 1 or i == len(A)):
+        if(i == 1 or i == len(A)): # if length is similar to the index
             return False
-        while(i < len(A) and A[i] < A[i-1]):
+        while(i < len(A) and A[i] < A[i-1]): # for the declining order
             i += 1
         
         return i==len(A)
