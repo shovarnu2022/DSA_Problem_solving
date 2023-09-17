@@ -34,14 +34,14 @@ element is between 0 and 2, which is 1
 """
 
 class Solution:
-    def missingNUmber(self, nums: List[int]) -> int:
+    def missingNumber(self, nums: List[int]) -> int:
         currentSum = sum(nums)
         n = len(nums)
-        intendedSum = n*(n+1)/2
+        intendedSum = n*(n+1)/2 # gaussian theorem
 
         return int(intendedSum - currentSum)
     
-    
+
 
 
 
