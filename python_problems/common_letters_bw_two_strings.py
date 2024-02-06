@@ -1,0 +1,7 @@
+"""
+eg: NAINA
+REENE
+
+N IS COMMON BETWEEN TWO STRINGS
+"""
+
