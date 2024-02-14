@@ -42,7 +42,7 @@ def eval_expression(arr):
     return stack[-1]
 
 
-A = ['5','1','2','/','4','*','+','3','-']
+A = ['5', '1', '2', '/', '4', '*', '+', '3', '-']
 print(eval_expression(A))
 
 
