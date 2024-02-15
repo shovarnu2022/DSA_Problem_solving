@@ -42,8 +42,26 @@ def remove_duplicates(arr):
     return arr[0:pivot+1]
 
 
-arr=[1,1,2,2,2,3,4,4,4,5,5]
+arr = [1, 1, 2, 2, 2, 3, 4, 4, 4, 5, 5]
 print(remove_duplicates(arr))
+
+
+# dict method
+dict1 = {
+    'car': ["Ford", "Toyota", "Ford", "Toyota"],
+    'brand': ["Mustang", "Ranz", "Mustang", "Ranz"]
+}
+
+dict2 = {}
+
+for key, value in dict1.items():
+    dict2[key] = set(value)
+print(dict2)
+
+
+
+
+
 
 
 
