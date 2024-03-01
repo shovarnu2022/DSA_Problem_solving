@@ -61,7 +61,54 @@ At this point, we know for a fact that all element after
 current position version(5) are bad, so we can just
 ignore all version after that
 
+Now we have a search span of versions from 1-5, each of them
+have an equal chance of being the first version
+we'll go to the middle of the span so that we can keep cutting the
+search span in half
 
+Pseaudocode:
 
+isBadVersion(num) {
+    return num >= 3
+}
+
+solution(n){
+    L = 1
+    R = n
+    while L < R:
+        mid = (L+R)/2
+        if isBadVersion(mid):
+            R = mid
+        else:
+            L = mid + 1
+    return L
+}
 """
+
+
+def isBadVersion(num):
+    ...
+
+
+def firs_bad_version(n):
+    left = 1
+    right = n + 1
+    while left < right:
+        mid = (left+right)//2
+        if isBadVersion(mid):
+            if mid == 1 or (mid-1 > 0 and not isBadVersion(mid-1)):
+                return mid
+            else:
+                right = mid
+        else:
+            left = mid + 1
+    return left
+
+
+
+
+
+
+
+
 
