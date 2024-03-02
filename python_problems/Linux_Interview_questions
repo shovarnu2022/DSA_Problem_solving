@@ -1,0 +1,747 @@
+> what is the use of echo command?
+
+echo is a command that outputs the strings that are passed to it as arguments.
+
+echo "Hello World!"
+
+
+> How to check computer name or hostname in Linux?
+
+hostname
+
+
+> How to check current user in Linux terminal?
+
+whoami
+
+
+> How to check your current path/directory you are working in?
+
+pwd
+
+
+> Explain the difference between relative and absolute path?
+
+Relative path: Start from current working directory
+Absolute path: The full path to a file or directory
+
+
+> which command to use to create a file in Linux?
+
+touch, vi, vim, nano, etc.
+
+
+> How will you edit a existing file on a Linux server?
+
+touch myfile
+press i to insert
+:wq to save and exit
+
+
+> How to rename a file in Linux?
+
+mv myfile new_file
+
+
+> How to search for a string in a file?
+
+Using grep command
+
+
+> Difference between grep and egrep?
+
+In egrep, you can search for more than one strings at same time
+
+egrep "key1|key2|key4"
+
+
+> How can you read a file without using cat command?
+
+Using less, more, vi command
+
+
+> What is the advantage of using less command?
+
+We can easily read big files.
+Forward and backward search is easy.
+Navigation from top to bottom is easy.
+
+
+> How to check a file's permission?
+
+ls -l
+ll
+getfactl file_name
+
+
+> How to check the IP of your Linux server?
+
+ifconfig
+ip addr
+
+
+> How to read top 5 lines in a file?
+
+head -5 file_name
+
+
+> How to read top 5 lines in a file?
+
+tail -5 file_name
+
+
+> How to list hidden files?
+
+ls -la
+
+
+> How to see all the recently used commands
+
+history
+
+
+> What is root?
+
+Admin or super user
+/root home directory for root user
+/root directory
+
+
+> What is inode and how to find it for a file?
+
+ls -li
+inode is an index node. It serves as a unique identifier for a
+specific piece of metadata on a given filesystem.
+
+> Which command can you use for finding files on a linux system?
+
+using find and locate command
+
+
+> command for counting words and lines?
+
+wc
+wc -l
+
+
+> How can you combine two commands> Or what is pipe used for?
+
+We can combine two commands using |
+ex: command1 | command2
+
+
+Pipe is used to combine two commands and redirect output of command1
+to command2
+
+
+> How to view the difference between two files?
+
+diff file1 file2
+
+
+> What is the use of shred command?
+
+To permanently delete a file which is unable to recover
+
+shred -u file_name
+shred --remove file_name
+
+
+> How to check system architecture info?
+
+dmidecode and lscpu
+
+
+> How to combine two files?
+
+cat file1 file2 > file3
+
+
+> how to find type of file?
+
+file file_name
+
+
+> hwo to sort the content of a file?
+
+sort file_name
+cat file_name | sort
+
+
+> Different ways to access a Linux server remotely (from a
+windows machine)?
+
+Using some tools and terminal like
+* putty
+* git bash
+* cmd
+
+
+> What are different types of permissions for a file in Linux?
+
+* Read(r)
+* Write(w)
+* Executable(x)
+
+
+> Which permission allow a user to run an executable file (script)
+
+We need to provide executable(x) permission to the user.
+
+
+> How to write the output of a command into a file?
+
+command > file_name
+
+
+> How to write something in a file without deleting the existing content?
+
+we can append the file using >>
+
+
+> How to redirect an error of a command into a file?
+
+To redirect an error we need to use 2>
+To redirect both error and output, 2>&1
+
+
+> How to Automate any task or script?
+
+Using cron jobs
+For which we have crontab and at command
+
+
+> How to check scheduled jobs?
+
+crontab -l
+
+
+> what is the meaning of this cron job? * * * * *
+
+*               *                  *                       *                         *
+minute(0-59)  hour(0-23)   day of the month(1-31)       month(1-12)          day of the week(0-6)
+
+
+> if your cron job didn't work, how would you check?
+
+check system time,
+crontab entry,
+check /var/log/messages
+
+
+> what is daemon service?
+
+Service that keep running in background.
+Example: httpd, sshd, chronyd
+
+
+
+> How to check if a service is running or not?
+
+systemctl status service_name
+
+
+> How to stop/start any service?
+
+systemctl start service_name
+systemctl stop service_name
+
+
+> How to check for free disk space?
+
+We can use df command
+
+
+> How to check size of directory's content?
+
+du command
+
+
+> How to check CPU usage for a process?
+
+top
+
+
+> what is a process in Linux?
+
+
+An instance of a running program is called a process.
+Whenever you start a program/application or execute a command, a process
+is created.
+
+For every process a unique number is assigned which is called PID(process ID)
+
+
+> How to check if a process/application is running or not?
+
+Using ps command
+
+
+> How to terminate/stop a running process?
+
+kill command
+
+
+> Difference between kill and kill -9
+
+
+kill -9 will terminate a program forcefully
+
+
+> How to check if a IP/Server is accessible or not?
+
+we can use ping or telnet command
+
+
+> Which command to use to get info about ports?
+
+netstat command
+
+
+> How to check open port on Linux system?
+
+netstat putan | grep port_no
+
+
+> How to check network interfaces in Linux?
+
+we can use ifconfig and netstat command
+
+
+> Difference between telnet and SSH?
+
+telnet is not secured and ssh is secured.
+
+> Which service should be running on server to allow you to connect
+remotely?
+
+ssh or sshd
+
+
+> What is SSH?
+
+SSH or secure shell is a network communication protocol
+that enables two computer/devices or communicate and share data.
+
+
+> Why is it called as secure shell?
+
+Because communication between host and client will be
+in encrypted format.
+
+
+> What is default port for SSH? port number 22
+
+
+> Which command is used to access a Linux system from a terminal or another
+Linux server?
+
+ssh user@xxx.xxx.xxx.xxx
+
+> What is kernel?
+
+The Linux kernel is the main component of a Linux OS and is the
+core interface between a computer's HW and its processes.
+
+It communicated b/w the 2, managing resources as efficiently as possible.
+
+
+> What is swap space?
+
+Swap space in Linux is used when the amount of physical memory (RAM)
+is full. If the system needs more memory resources and the RAM is full,
+inactive pages in memory are moved to the swap space.
+
+
+> Search a word in a file and replace it in entire file?
+
+Using sed command.
+
+sed's/<string_to_change>/<new_string>/g'file_name
+
+
+> What is the use of SCP(Secure copy) command?
+
+The SCP command copies files or directories betweem a local
+and remote system or between two remote systems.
+SCP uses SSH for data transfer.
+
+
+>  What is the use of FTP command?
+
+FTP is the file transfer protocol to exchange files to
+and from a remote computer or network.
+
+
+> What is alias and how to setup?
+
+To create shortcut to the command or task
+alias d="ls -ltr | awk '{print \$9}'"
+
+
+> Difference between upgrade and update system?
+
+update: updates all the presently installed packages to their
+lastest versions that are available in the repositories
+
+upgrade: performs the same actions as "yum update", but once finished
+it also removes all of the obsolete packages from the system.
+
+
+> Name default ports used for DNS, SMTP, FTP, SSH, DHCP and squid.
+
+DNS - 53
+SMTP - 25
+FTP - 21
+SSH - 22
+DHCP - 67, 68
+Squid - 3128
+Http - 80
+Https - 443
+
+
+> How to check if a package is installed or not?
+
+rpm -qa | grep <package_name>
+
+
+> Which of the following commands sends exactly three ping packets to google.com?
+
+ping -c 3 google.com
+
+
+> Which file contains a list of group names and GIDs?
+
+/etc/group
+
+
+> Which of the following contains the value of the exit status of the previously executed command?
+
+$?
+
+
+> Which command displays the number and type of processors used by a Linux system?
+
+cat /proc/cpuinfo
+lscpu
+
+
+> Which command should you use to get a list of connected USB devices?
+
+lsusb
+
+
+> Which of the following environment variables is used as the default argument for the
+"cd" command when no directory is provided?
+
+PWD, HOME, PATH, USERPROFILE
+
+ans: HOME
+
+
+> A command following a semicolon will be executed no matter the exit status of the command
+that preceded the semicolon.
+
+cd /root; cat /etc/passwd
+TRUE
+
+
+> What are the valid values of the exit status?
+
+0-255
+
+
+> According to the FHS(Filesystem hierarchy standard), What is the correct directory for log files?
+
+/var/log
+
+
+> What port must be open to ping a given host?
+
+Ping dont use port
+
+
+
+> How will you transfer file from a linux server to your Windows OS and vice versa?
+
+Using SSH, FTP, SFTP and tools like WinSCP, FileZilla
+
+
+> Can you split a file into two? If yes, then how?
+
+split -l 3 file_name
+
+
+> How can you get the unique values from a list?
+
+sort file_name | uniq
+
+
+> Using VI editor, how will you edit and save a file?
+
+vi file_name
+i - for insert
+esc - to come out of insert mode
+wq - to save
+
+
+> What is the difference between find and locate command?
+
+locate command search in it's own db and you will need to keep updating db.
+
+
+> What is TEE command used for?
+
+pwd | tee file1
+
+
+> What is Xargs used for?
+
+It converts the stdInput into command line argument
+
+cat filelist.txt | xargs wc -l
+
+
+> How can you find number of files, folders in a directory?
+
+ls -1 | wc -l
+
+
+> I want to read only line 25 to 30th Line, how will you do it?
+
+head -30 file_name | tail -5
+
+
+> what is the use of Tar command?
+
+The tar command is used to compress a group of files into an archive.
+Tar archives combines multiple files and/or directories together into a single file.
+
+
+> How to redirect both standard output and error to a file?
+
+command > file 2>&1
+
+
+> Name some commands for DNS resolution?
+
+ping, nslookup, dig and host
+
+
+> What is the use of At command?
+
+Command used to schedule a task once.
+
+
+> Which service is used by At command?
+
+Atd
+
+
+> Which command syntax is correct if you want to assign read only permission to everyone
+and write permission to the owner of the file?
+
+
+chmod u+w, chmod a+r
+
+
+> Which command changes the group ownership of the "/var/www" directory to the "nginx" group?
+
+chgrp nginx /var/www
+
+
+> what is chmod 777 file_name?
+
+This is a way of changing permission using numeric mode.
+777 means provide all the permissions rwx to user, group and other users also.
+
+
+> What is ACL and its advantage?
+
+Access Control List is used to modify the permissions of files. for this we use
+setfacl and getfacl commands.
+
+Advantage: We can provide permission to a specific user.
+
+
+
+> What are links in Linux and it's type?
+
+A connection between a file name and the actual data on the disk.
+
+We can call it a shortcut.
+
+
+> Difference between Hard and soft links?
+
+Soft link: Link will be removed if original file removed or deleted.
+
+ln -s
+
+Hard link: Renaming, deleting or removing the file will not effect the link
+
+ln
+
+
+> What command you can use to see all the environment variables?
+
+env or printenv
+
+
+> What are the different ways to set environment variables?
+
+At user level:
+* Temporary
+* Permanent
+
+At global level
+
+
+> How can you set environment variables in Linux?
+
+using export command
+
+to set variable for the current user - .bashrc
+to set variable for globally - /etc/bashrc or /etc/profile
+
+
+> What command allows you to display all the process IDs of the running nginx processes?
+
+pidof httpd
+
+
+
+> What is nice value of a process?
+
+Niceness scale goes from -20 to 19. The lower the number, more priority that task gets.
+
+Process priority = nice
+(ex: nice -n 5 process)
+
+
+
+>  How to check the nice value of a process?
+
+ps- l pid
+
+
+> You want a process with a PID of 8675 to complete its task faster than the default rate.
+Which command should you run to accomplish this goal?
+
+renice -20 -p 8675,
+this can be done by top command also
+
+
+
+> What command can be used to check the %CPU and %Memory of a process?
+
+top command
+
+
+
+> If you want to run a task/script in background even if you close your teminal, what is the way?
+
+nohup process &
+nohup process > /dev/null 2>&1 &
+
+
+> How to see all the active jobs?
+
+jobs
+
+
+> How to resume a stopped job in background or foreground?
+
+fg
+
+
+> Which command displays information about kernel-related messages along with hardware
+and system startup messages stored in kernel ring buffer?
+
+dmesg
+
+
+> In a directory you have a combination of files like xml, yml, scripts, logs etc.
+how you will get/see only xml files?
+
+ls -l *.xml
+
+
+> Create 100 files with naming file1, file2, ... file100.
+
+
+touch file{1..100}
+
+
+
+> How would you display all the files in the present working directory that start
+with either the letter "c" or "m"?
+
+ls [cm]*
+
+
+> Run a command that shows all the lines except any lines starting with the a character # in a file?
+
+cat file | grep -v ^#
+
+
+> Which of the following commands list all files and directories except those beginning with
+the letter "a"?
+
+ls -1 | grep -v ^a
+
+
+> Which of the following Bash commands produces the output of "bat bet bit bot"?
+
+echo b{a,e,i,o}t
+
+
+> What is a VM?
+
+A Virtual environment(VM) functions as a virtual computer system with its own CPU, memory, network
+interface, and storage, create on a physical hardware system.
+
+
+> Which command can you use to display a list of currently configured logical volumes?
+
+lvs
+
+
+> Which command can you use to display a list of currently configured volume groups?
+
+vgs
+
+
+> Which command displays memory usage, including the amount of swap space being used?
+
+free
+
+
+>  The /home partition is running out of disk space. Which command can you use to determine
+which user's home directory is using the most space?
+
+du
+
+
+> what is Linux filesystem?
+
+OS store and manage data on disk or partitions using a structure called Filesystem.
+Filesystem includes files, directories and it's related permissions.
+
+How to check you Linux filesystem?
+
+lsblk -f
+
+
+
+
+
+
+
+
+
+
+
+
+
+
